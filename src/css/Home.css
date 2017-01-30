@@ -8,3 +8,16 @@
 	background-position:fill;
 	background-image: url(../../public/background-img.jpg);
 }
+
+.Instructions {
+	margin-top: 100px;
+	color: white;
+	font-size: 25px;
+}
+
+.Input {
+	position: relative;
+	text-align: center;
+	width: 25%;
+	margin: 0 auto;
+}
