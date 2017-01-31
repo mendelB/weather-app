@@ -25,9 +25,10 @@ class Forecast extends Component {
 			<DayWeather 
 				date={moment().add(i, 'day').format('LL')} 
 				icon={w.weather[0].icon.toLowerCase()}
-				key={i} />
+				key={i}
+				city={this.state.fiveDayWeather.city.name}
+				data={w} />
 		)
-		weathers.length
 		return (
 			this.state.loaded
 			?
