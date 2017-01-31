@@ -1,20 +1,17 @@
-.clear {
-	content: url("../../public/sunny.png");
-	width: 60%;
-}
-
-.snow {
-	content: url("../../public/snow.png");
-	height: 20%;
-	width: 60%;	
-}
-.clouds {
-	content: url("../../public/w-partly-cloudy.png");
-	width: 60%;	
-}
-
 .DayWeather {
-	float: left;
-	width: 25%;
-	height: 100%;
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+
+.text {
+	margin-bottom: 0px;
+	padding-top: 20px;
+}
+
+.Date {
+	margin-bottom: 0px;
+}
+
+.img {
+	min-height: 100px;
 }
