@@ -18,7 +18,7 @@ class Home extends Component {
 		this.setState({value: event.target.value});
 	}
 	handleClick() {
-		WeatherFetcher.fetchWeather(this.state.value)
+		WeatherFetcher.fetchDailyWeather(this.state.value)
 			.then((data) => this.setState({data: data.data, loaded: false}));
 	}
 	render() {
