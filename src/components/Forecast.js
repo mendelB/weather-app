@@ -11,14 +11,10 @@ class Forecast extends Component {
 		this.state = {
 			loaded: false
 		}
-		this.clickHandle = this.clickHandle.bind(this)
 	}
 	componentDidMount() {
 		WeatherFetcher.fetchFiveDayWeather(this.props.params.city)
 			.then((data) => this.setState({fiveDayWeather: data.data, loaded: true}));
-	}
-	clickHandle() {
-		debugger
 	}
 	render() {
 		let weathers = this.state.loaded && this.state.fiveDayWeather.list.map((w, i) => 
@@ -48,7 +44,6 @@ class Forecast extends Component {
 							{weathers[4]}
 						</Row>
 					</Grid>
-					<button onClick={this.clickHandle}>Click</button>
 				</div>
 			:
 				<div className="Forecast"><h1>Loading</h1></div>	

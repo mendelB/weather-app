@@ -1,6 +1,7 @@
 .DayWeather {
 	margin-bottom: 40px;
 	margin-top: 30px;
+	cursor: pointer;
 }
 
 .text {
