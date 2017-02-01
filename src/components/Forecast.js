@@ -13,8 +13,12 @@ class Forecast extends Component {
 		}
 	}
 	componentDidMount() {
-		WeatherFetcher.fetchFiveDayWeather(this.props.params.city)
+		WeatherFetcher.fetchFiveDayWeather(this.props.routeParams.city)
 			.then((data) => this.setState({fiveDayWeather: data.data, loaded: true}));
+	}
+	componentDidUpdate(prevProps, prevState) {
+		WeatherFetcher.fetchFiveDayWeather(this.props.routeParams.city)
+			.then((data) => this.setState({fiveDayWeather: data.data, loaded: true}));	
 	}
 	render() {
 		let weathers = this.state.loaded && this.state.fiveDayWeather.list.map((w, i) => 

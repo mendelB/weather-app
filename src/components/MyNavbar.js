@@ -17,6 +17,7 @@ class MyNavbar extends Component {
 	}
 	handleClick() {
 		const path = `/forecast/${this.state.value}`
+		this.setState({value: ''})
     	browserHistory.push(path)
 	}
 	render() {
