@@ -16,8 +16,8 @@ class Forecast extends Component {
 		WeatherFetcher.fetchFiveDayWeather(this.props.routeParams.city)
 			.then((data) => this.setState({fiveDayWeather: data.data, loaded: true}));
 	}
-	componentDidUpdate(prevProps, prevState) {
-		WeatherFetcher.fetchFiveDayWeather(this.props.routeParams.city)
+	componentWillReceiveProps(nextProps) {
+		WeatherFetcher.fetchFiveDayWeather(nextProps.routeParams.city)
 			.then((data) => this.setState({fiveDayWeather: data.data, loaded: true}));	
 	}
 	render() {
